@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Showcase</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Art Showcase</h1>
+    </header>
+    <main>
+        <section id="artworks">
+            <h2>Featured Artworks</h2>
+            <ul>
+                <% artworks.forEach(function(artwork) { %>
+                    <li>
+                        <h3><%= artwork.title %></h3>
+                        <p><%= artwork.artist %></p>
+                        <a href="/artworks/<%= artwork.id %>">View Details</a>
+                    </li>
+                <% }); %>
+            </ul>
+        </section>
+    </main>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
